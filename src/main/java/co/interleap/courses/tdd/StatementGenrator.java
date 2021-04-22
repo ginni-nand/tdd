@@ -1,9 +1,15 @@
 package co.interleap.courses.tdd;
+import java.util.List;
 public class StatementGenrator{
-    public static final int FARE_PER_KM=10;
-    public static final int FARE_PER_MINUTE=1;
-    public double create(double distance,double time)
+
+   public Statement create(List<Ride> rides)
     {
-        return FARE_PER_KM*distance + FARE_PER_MINUTE*time;
+        double fare=0;
+        for(Ride ride: rides)
+        {
+            fare+=ride.getTotalFare();
+        }
+        return new Statement(fare,fare/rides.size(),rides.size());
     }
+
 }
