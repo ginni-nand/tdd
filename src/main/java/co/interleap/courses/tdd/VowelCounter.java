@@ -3,6 +3,8 @@ package co.interleap.courses.tdd;
 public class VowelCounter {
     public int count(String s)
     {
-        return s.length();
+        final String Regex="(?i[^aeiou]+";
+        return s.replaceAll(Regex,"").length();
     }
+
 }
