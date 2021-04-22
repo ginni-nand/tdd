@@ -1,7 +1,7 @@
 package co.interleap.courses.tdd;
 
 import org.junit.Test;
-
+import static org.junit.Assert.assertEquals;
 public class VowelCounterTest {
 
     @Test
@@ -18,14 +18,6 @@ public class VowelCounterTest {
     {
         assertEquals(5,new VowelCounter().count("aeiou"));
     }
-    @Test
-    public void shouldCountVowelsIn StringWithVowelsAndConsonents()
-    {
-        assertEquals(4,new VowelCounter().count("hello everyone"));
-    }
-    @Test
-    public void shouldCountVowelsInt StringWithBothUppercaseAndLowercaseCharacters()
-    {
-        assertEquals(12,new VowelCounter().count("hey HOW Is everyone"));
-    }
+
+
 }

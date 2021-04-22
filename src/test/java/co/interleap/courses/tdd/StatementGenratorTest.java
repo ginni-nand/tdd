@@ -1,6 +1,6 @@
 package co.interleap.courses.tdd;
 import org.junit.Test;
-import junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 public class StatementGenratorTest{
     @Test
     public void shouldCalculateFareGivenTime()
