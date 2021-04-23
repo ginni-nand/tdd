@@ -3,10 +3,9 @@ import org.junit.Test;
 
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.*;
 import static org.junit.Assert.assertEquals;
-public class StatementGenratorTest{
+public class StatementTest {
     /*@Test
     public void shouldCalculateFareGivenTime()
     {
@@ -29,12 +28,12 @@ public class StatementGenratorTest{
     @Test
     public void genrateStatementForMultipleJourneyGivenTotalDistanceAndTime()
     {
-        StatementGenrator sg=new StatementGenrator();
+
         List rides= Arrays.asList(new Ride(3,4),new Ride(5,1) );
-       Statement statement=sg.create(rides);
-        assertEquals(85,statement.getTotalFare(),.01);
-        assertEquals(42.5,statement.getAverageFare(),.01);
-        assertEquals(2,statement.getNumberOfRides(),.01);
+        Statement sg=new Statement(rides);
+        assertEquals(85,sg.getTotalFare(),.01);
+        assertEquals(42.5,sg.getAverageFare(),.01);
+        assertEquals(2,sg.getNumberOfRides(),.01);
 
     }
 }

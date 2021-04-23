@@ -1,24 +1,30 @@
 package co.interleap.courses.tdd;
-
+import java.util.List;
 public class Statement {
-    private double totalFare;
-    private double averageFarePerRides;
-    private double numberOfRides;
-    public Statement(double totalFare,double averageFarePerRides,double numberOfRides)
-    {
-        this.totalFare=totalFare;
-        this.averageFarePerRides=averageFarePerRides;
-        this.numberOfRides=numberOfRides;
-    }
+private List <Ride> rides;
+public Statement(List<Ride> rides)
+{
+    this.rides=rides;
+}
+
+
     public double getTotalFare() {
-        return totalFare;
+        double fare=0;
+
+        for(Ride ride: rides)
+        {
+            fare+=ride.getTotalFare();
+        }
+       return fare;
     }
 
-    public double getAverageFare() {
-        return averageFarePerRides;
-    }
+
 
     public double getNumberOfRides() {
-        return numberOfRides;
+       return rides.size();
+    }
+    public double getAverageFare() {
+        return getTotalFare()/getNumberOfRides();
+
     }
 }
